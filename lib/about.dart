@@ -37,7 +37,7 @@ class About extends StatelessWidget {
             ),
             SizedBox(height: 4),
             Text(
-              "ar@tec.rjt.ac.lk",
+              "emergencymedicale@gmail.com",
               style: TextStyle(fontSize: 16, color: Colors.blue),
             ),
             SizedBox(height: 24),
@@ -55,7 +55,7 @@ class About extends StatelessWidget {
 
             // VISION SECTION
             Text(
-              "Vision",
+              "Vision of the EMS Locator App",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
@@ -63,14 +63,14 @@ class About extends StatelessWidget {
             ),
             SizedBox(height: 4),
             Text(
-              "To be a center of excellence in higher education and research.",
+              "To revolutionize emergency medical response by providing instant access to critical healthcare services, reducing response times, and ensuring the safety and well-being of every individual in need.",
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 16),
 
             // MISSION SECTION
             Text(
-              "Mission",
+              "Mission of the EMS Locator App",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
@@ -78,7 +78,7 @@ class About extends StatelessWidget {
             ),
             SizedBox(height: 4),
             Text(
-              "To produce innovative intellectuals capable of taking challenges in the context of global development through the competencies developed from the academic programmes, research, and training of wide nature.",
+              "Our mission is to provide a user-friendly platform for quick access to nearby medical facilities during emergencies, leveraging GPS and real-time data. We aim to enhance emergency response efficiency, ensure accessibility for all, prioritize data security, and collaborate with healthcare providers to build a reliable, scalable system that saves lives",
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 40),

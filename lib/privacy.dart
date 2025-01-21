@@ -30,7 +30,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Last updated: MM/DD/YYYY', // Replace with actual last updated date
+                'Last updated: 22/01/2025', // Replace with actual last updated date
                 style: TextStyle(
                   fontSize: 14.0,
                   color: Colors.grey,
@@ -47,11 +47,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
               SizedBox(height: 16.0),
               Text(
                 // Replace with your actual privacy policy content
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-                'Praesent pellentesque congue lorem, vel tincidunt tortor '
-                'placerat a. Proin orci diam quam. Aenean in sagittis magna, '
-                'ut feugiat diam. Fusce ac ipsum eros. Maecenas semper '
-                'ultricies lorem, sed accumsan mi.',
+                'At EMS Locator, we prioritize your privacy and are committed to safeguarding your personal information. This Privacy Policy outlines how we collect, use, share, and protect your data when you use our application. We collect information such as your name, email address, and phone number when you register, as well as your location data to provide emergency services and display nearby medical facilities. Additionally, we may gather app usage data, including device type and operating system, to enhance functionality and user experience.\n Your information is used to provide core app functionalities, such as locating medical facilities, facilitating real-time location sharing during emergencies, and delivering notifications. We do not sell or rent your personal data to third parties. However, we may share your information with emergency service providers to ensure timely response or comply with legal obligations. \n To protect your data, we employ advanced encryption and secure storage methods, though no system can guarantee absolute security.You have the right to access, update, or request the deletion of your data at any time. Should you wish to opt out of certain data practices, please contact us for assistance. This Privacy Policy may be updated periodically, and we encourage you to review it regularly to stay informed about how your data is managed. For questions or concerns, contact us at emergencymedical@gmail.com.',
                 style: TextStyle(fontSize: 16.0),
               ),
               SizedBox(height: 24.0),
@@ -65,41 +61,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
               SizedBox(height: 16.0),
               Text(
                 // Replace with your actual terms and conditions content
-                '1. Ut ac pretium odio. Donec viverra, '
-                'enim sit amet pretium sodales, arcu eros '
-                'malesuada mauris, eu pharetra eros eros vitae '
-                'orci. Morbi pellentesque malesuada eros semper '
-                'ultricies. Vestibulum lobortis nisi vel neque '
-                'auctor, ultricies orci a. Mauris ut lacinia '
-                'justo, sed suscipit tortor. Nam egestas nulla '
-                'posuere neque tincidunt porta.\n\n'
-                '2. Ut ac pretium odio. Donec viverra, '
-                'enim sit amet pretium sodales, arcu eros '
-                'malesuada mauris, eu pharetra eros eros vitae '
-                'orci. Morbi pellentesque malesuada eros semper '
-                'ultricies. Vestibulum lobortis nisi vel neque '
-                'auctor, ultricies orci a. Mauris ut lacinia '
-                'justo, sed suscipit tortor. Nam egestas nulla '
-                'posuere neque tincidunt porta.\n\n'
-                '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-                'Praesent pellentesque congue lorem, vel tincidunt tortor '
-                'placerat a. Proin orci diam quam.\n\n'
-                '4. Ut ac pretium odio. Donec viverra, '
-                'enim sit amet pretium sodales, arcu eros '
-                'malesuada mauris, eu pharetra eros eros vitae '
-                'orci. Morbi pellentesque malesuada eros semper '
-                'ultricies. Vestibulum lobortis nisi vel neque '
-                'auctor, ultricies orci a. Mauris ut lacinia '
-                'justo, sed suscipit tortor. Nam egestas nulla '
-                'posuere neque tincidunt porta.\n\n'
-                '5. Nunc auctor tortor in dolor luctus, quis '
-                'euismod urna tincidunt. Aenean in mattis metus, '
-                'bibendum at rhoncus at, volutpat eget massa. '
-                'Morbi pellentesque malesuada eros semper '
-                'ultricies. Vestibulum lobortis nisi vel neque '
-                'auctor, ultricies orci a. Mauris ut lacinia '
-                'justo, sed suscipit tortor. Nam egestas nulla '
-                'posuere neque tincidunt porta.',
+                'By using the EMS Locator App, you agree to these terms and conditions. The app is designed to assist users in locating nearby medical facilities during emergencies. You are expected to use the app responsibly, ensuring that all information you provide is accurate and that your usage complies with applicable laws. The app must not be used for any illegal or harmful activities.\n While EMS Locator strives to provide reliable and accurate information, we are not liable for any direct, indirect, or consequential damages arising from the use of the app. This includes inaccuracies in third-party data, such as the availability of medical facilities or services. All content and materials in the app are the intellectual property of EMS Locator and must not be reproduced or distributed without authorization.',
                 style: TextStyle(fontSize: 16.0),
               ),
             ],

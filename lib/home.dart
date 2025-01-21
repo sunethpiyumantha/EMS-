@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -5,16 +6,15 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   Future<Map<String, dynamic>> _fetchUserData() async {
-    const userId =
-        'User Name'; // Replace with actual user ID (e.g., from FirebaseAuth)
-    final userDoc =
-        await FirebaseFirestore.instance.collection('user').doc(userId).get();
-
-    if (userDoc.exists) {
-      return userDoc.data()!;
-    } else {
-      throw Exception('User not found');
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      final userData = await FirebaseFirestore.instance
+          .collection('user')
+          .doc(user.uid)
+          .get();
+      return userData.data() as Map<String, dynamic>;
     }
+    return {};
   }
 
   @override
@@ -56,8 +56,7 @@ class HomeScreen extends StatelessWidget {
                   return Text('Error: ${snapshot.error}');
                 } else if (snapshot.hasData) {
                   final userData = snapshot.data!;
-                  final profilePic =
-                      userData['pimage'] ?? 'assets/default_profile.png';
+                  final profilePic = userData['pimage'] ?? 'assets/driver.png';
                   final username = userData['username'] ?? 'Guest';
 
                   return Container(
@@ -117,17 +116,10 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   _buildDashboardCard(
                     context,
-                    title: 'Emergency Services',
-                    icon: Icons.local_hospital,
-                    onTap: () {
-                      // Handle Emergency Services action
-                    },
-                  ),
-                  _buildDashboardCard(
-                    context,
                     title: 'Hospital',
                     icon: Icons.medical_services,
                     onTap: () {
+                      Navigator.pushNamed(context, '/hospitalmap');
                       // Handle Hospital action
                     },
                   ),
@@ -136,6 +128,7 @@ class HomeScreen extends StatelessWidget {
                     title: 'Pharmacy',
                     icon: Icons.local_pharmacy,
                     onTap: () {
+                      Navigator.pushNamed(context, '/hospitalmap');
                       // Handle Pharmacy action
                     },
                   ),

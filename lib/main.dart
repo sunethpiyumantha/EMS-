@@ -3,14 +3,17 @@ import 'package:emergency_system/adddriver.dart';
 import 'package:emergency_system/editprofile.dart';
 import 'package:emergency_system/helpcenter.dart';
 import 'package:emergency_system/home.dart';
+import 'package:emergency_system/hospitalMap.dart';
 import 'package:emergency_system/login.dart';
 import 'package:emergency_system/news.dart';
 import 'package:emergency_system/passmgt.dart';
 import 'package:emergency_system/passwordreset.dart';
+import 'package:emergency_system/pharmacyMap.dart';
 import 'package:emergency_system/privacy.dart';
 import 'package:emergency_system/profileseting.dart';
 import 'package:emergency_system/registration.dart';
 import 'package:emergency_system/setting.dart';
+import 'package:emergency_system/showfeedback.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:emergency_system/welcome.dart';
@@ -56,6 +59,12 @@ class MyApp extends StatelessWidget {
         '/profileset': (context) => const UserProfileScreen(),
         '/editprofile': (context) => const ProfileEdit(),
         '/adddriver': (context) => const AddDriverScreen(),
+        '/hospitalmap': (context) => const HospitalMap(),
+        '/pharmacymap': (context) => const PharmacyMap(),
+        '/showfeed': (context) => const ShowFeedback(
+              driverName: '',
+              senderUsername: '',
+            ),
       },
     );
   }

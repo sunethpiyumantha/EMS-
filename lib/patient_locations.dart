@@ -2,8 +2,13 @@
 // firebase_core: ^latest_version
 // firebase_database: ^latest_version
 
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter/material.dart';
+import 'package:location/location.dart';
+import 'dart:async';
 
 class PatientLocationService {
   final DatabaseReference _database = FirebaseDatabase.instance.ref();
@@ -107,15 +112,33 @@ class PatientLocationService {
   }
 }
 
+// Define LocationScreen class
+class LocationScreen extends StatefulWidget {
+  @override
+  _LocationScreenState createState() => _LocationScreenState();
+}
+
 // Usage in LocationScreen
 class _LocationScreenState extends State<LocationScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Patient Location'),
+      ),
+      body: Center(
+        child: Text('Tracking patient location...'),
+      ),
+    );
+  }
+
   late PatientLocationService _locationService;
 
   @override
   void initState() {
     super.initState();
     // Initialize with a unique patient ID (you should generate this when patient registers)
-    locationService = PatientLocationService(
+    _locationService = PatientLocationService(
         patientId: 'patient${DateTime.now().millisecondsSinceEpoch}');
     _initializeServices();
   }
@@ -127,6 +150,12 @@ class _LocationScreenState extends State<LocationScreen> {
     } catch (e) {
       _showMessage('Error initializing services: $e');
     }
+  }
+
+  void _showMessage(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message)),
+    );
   }
 
   @override
